@@ -3,7 +3,7 @@ const data = [
         id: 1,
         title: 'Board',
         image: '../../../res/images/bs2.jpeg',
-        link: "../Home/Home.html",
+        link: "../SelectRegionAndTown/SelectRegionAndTown.html",
         description: 'Here You can board a bus for a travell,you will have to select your region and town where you are'
     },
     {
