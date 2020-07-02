@@ -1,7 +1,7 @@
 
 body {
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family:  sans-serif;
 }
 
 
@@ -21,7 +21,7 @@ div.content {
 
   
 
-input[type=text], select, textarea {
+input[type=text],[type=email]{
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -67,20 +67,24 @@ input[type=text], select, textarea {
     margin-top: 6px;
   }
 
-  .col-4{
+  .col-4,.col-3{
     float: left;
     padding: 15px;
   }
-  .col-3{
-    float: left;
-    padding: 15px;
-  }
+  
   .row{
       border-bottom: 1px solid black;
       margin-top: 5px;
       margin-bottom: 5px;;
   }
   
+  #country{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
   
   /* Clear floats after the columns */
   .row:after {
