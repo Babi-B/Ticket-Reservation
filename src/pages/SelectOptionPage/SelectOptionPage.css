@@ -20,7 +20,7 @@ body {
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  /* perspective: 100rem; */
+  perspective: 100rem;
 }
 
 .listItem {

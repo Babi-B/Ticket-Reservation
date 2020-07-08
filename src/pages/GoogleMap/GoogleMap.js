@@ -2,14 +2,14 @@
 let userLocation = function getLocation() {
     navigator.geolocation.getCurrentPosition(position => {
         let array = [position.coords.longitude, position.coords.latitude];
-        console.log(array);
-        return {
-            array
-        };
+        // return {
+        //     array
+        // };
     });
 }
 
-getLocation();
+
+// console.log(userLocation.array[0])
 
 //   display map
 mapboxgl.accessToken = "pk.eyJ1IjoiYmVubmRpcCIsImEiOiJjazRtdWExYWwweHA4M2tuNTljbmxjcjlmIn0.ji9iFK1hYN1sP1H-Kl99Rw";
