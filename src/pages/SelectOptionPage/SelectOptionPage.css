@@ -155,13 +155,13 @@ body {
     color: #dcdde1;
     font-size: 15px;
     font-weight: bold;
-    margin-top: 40px
   }
 }
 
 @media only screen and (max-width: 1026px) {
   .description {
     font-size: 15px;
+
   }
   .selectText{
     color: rgba(255, 255, 255,1.0);
@@ -173,10 +173,8 @@ body {
 @media only screen and (max-width: 898px) {
   .description {
     font-size: 15px;
-    margin-top: 40px
   }
   body {
-    /* align-items: center; */
     display: flex;
     flex-direction: column;
     justify-content: center;
