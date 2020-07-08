@@ -3,12 +3,9 @@ body {
   justify-content: center;
   display: flex;
   width: 100vw;
-  height: 100vh;
-  /* background-image: url(../../../res/images/select1.jpeg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-  /* perspective: 100rem; */
+  height: 99vh;
+  padding-bottom: 30px;
+  perspective: 100rem;
 }
 
 .house {
@@ -89,7 +86,7 @@ body {
 
 .description {
   color: #dcdde1;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -145,4 +142,122 @@ body {
 .sideImageStatic{
   width: 200px;
   height: 200px;
+}
+
+/*responsive designs*/
+
+@media only screen and (max-width: 1287px) {
+  .listItem {
+    width: 300px;
+    height: 45%;
+  }
+  .description {
+    color: #dcdde1;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 40px
+  }
+}
+
+@media only screen and (max-width: 1026px) {
+  .description {
+    font-size: 15px;
+  }
+  .selectText{
+    color: rgba(255, 255, 255,1.0);
+    font-size: 20px;
+    font-weight: bolder;
+  }
+}
+
+@media only screen and (max-width: 898px) {
+  .description {
+    font-size: 15px;
+    margin-top: 40px
+  }
+  body {
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px
+  }
+
+
+  .listItem {
+    width: 300px;
+    height: 37%;
+  }
+
+  .sideContainer {
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(109, 33, 79,1.0);
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    margin-right: 16px;
+  }
+
+  .selectText{
+    color: rgba(255, 255, 255,1.0);
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .sideImageStatic{
+    display: none;
+  }
+
+  .sideImage {
+    width: 100px;
+    height: 100px;
+    animation: none;
+  }
+
+  .house {
+   margin-top: 30px
+  }
+  
+
+  @keyframes image-float {
+    0% {
+      transform: translateZ(40rem);
+      opacity: 1;
+    }
+    40% {
+      transform: translateZ(-500rem) translateX(150rem);
+      opacity: 0.8;
+    }
+    70% {
+      transform: translateZ(-700rem) translateX(800rem);
+      opacity: 0.6;
+    }
+    70% {
+      transform: translateZ(-50rem) translateX(100rem);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateZ(40rem);
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 590px){
+  .listItem {
+    width: 400px;
+    height: 39%;
+  }
+  .description {
+    font-size: 15px;
+    margin-top: 40px;
+    color: indigo;
+  }
+
+  body{
+    
+  }
 }
