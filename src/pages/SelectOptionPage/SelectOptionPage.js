@@ -24,7 +24,7 @@ const data = [
         id: 4,
         title: 'Entertainment',
         image: '../../../res/images/en.jpeg',
-        link: "../Home/Home.html",
+        link: "../Entertainment/index.html",
         description: 'Keep yourselt busy with some games and exciting videos and sounds'
     }
 ];

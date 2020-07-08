@@ -39,7 +39,7 @@ body {
 }
 
 .listItem:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   transition: all ease 1s;
   cursor: pointer;
 }
@@ -108,7 +108,8 @@ body {
 .sideImage {
   width: 100px;
   height: 100px;
-  animation: image-float 25s infinite;
+  animation: image-float 45s infinite;
+  margin-top: -30px
 }
 
 @keyframes image-float {
