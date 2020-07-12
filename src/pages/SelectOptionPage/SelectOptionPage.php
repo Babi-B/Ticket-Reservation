@@ -1,3 +1,6 @@
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,11 +12,18 @@
   </head>
   <body>
     <div class="sideContainer">
-      <p class="selectText">Select an option</p>
-      <img
-        class="sideImageStatic"
-        src="../../../res/images/ian-dooley-hpTH5b6mo2s-unsplash.jpg"
-      />
+      <div>
+        <p class="welcomeText">Welcome <?php echo $_SESSION['user_name']?>! &#128526 </p>
+      <p class="selectText">Pick an option on your right</p>
+      <div class="sideButtons">
+         <a class="sideButtonsText" href="../Home/Home.html">Home</a>
+      </div>
+      <div class="sideButtons">
+        <form action="../../backend/auth/logout.php" method="POST">
+          <button  type="submit" name="log_out_submit">Logout</button>
+        </form>
+      </div>
+      </div>
       <img
         class="sideImage"
         src="../../../res/images/p1-removebg-preview.png"

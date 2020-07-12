@@ -96,7 +96,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color:rgba(109, 33, 79,1.0);
-  width: 30%;
+  width: 25%;
   height: 99vh;
   align-items: center;
   justify-content: center;
@@ -107,8 +107,8 @@ body {
 .sideImage {
   width: 200px;
   height: 200px;
-  animation: image-float 45s infinite;
-  margin-top: -50px
+  animation: image-float 30s infinite;
+  margin-top: -40px
 }
 
 @keyframes image-float {
@@ -136,14 +136,45 @@ body {
 
 .selectText{
   color: rgba(255, 255, 255,1.0);
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bolder;
+  margin-bottom: 40px
 }
-
 
 .sideImageStatic{
   width: 200px;
   height: 200px;
+}
+
+.welcomeText{
+  color: #dcdde1;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center
+}
+
+.sideButtons{
+  width: 80%;
+  height: 45px;
+  border: 1px solid grey;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 1s;
+  cursor: pointer;
+  margin-left: 25px
+}
+
+.sideButtons:hover{
+  transform: scale(1.03)
+}
+
+.sideButtonsText{
+  color: #dcdde1;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /*responsive designs*/

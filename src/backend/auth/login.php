@@ -13,7 +13,7 @@
             header("Location: ../../pages/Registration/Registration.php?login=empty");
             exit();
         }else{
-            $sql = "SELECT * FROM users WHERE email = '$email';";
+            $sql = "SELECT * FROM users WHERE email = '$email' OR name = '$email';";
             $result = mysqli_query($conn,$sql);
             $resultCheck = mysqli_num_rows($result);
             if($resultCheck<1){

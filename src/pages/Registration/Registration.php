@@ -13,9 +13,6 @@
       defer
       src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
     ></script>
-    <?php
-      include_once '../../headerAndFooter/header.php'
-    ?>
   </head>
   <body>
     <?php
@@ -24,13 +21,19 @@
         echo "<p class ='error'>&#128528 Please fill in all fields.</p>";
       }
       elseif(strpos($fullUrl,"signup=emailExitsAlready") == true){
-        echo "<p class ='emailTaken'>Sorry! &#128549 this email is already taken.</p>";
+        echo "<p class ='emailTaken'>Sorry! &#128549 this email is already taken!</p>";
       }
       elseif(strpos($fullUrl,"signup=success") == true){
-        echo "<p class ='success'>&#128512 You've signed up successfully.</p>";
+        echo "<p class ='success'>&#128512 You've signed up successfully, please Log in.</p>";
+      }
+      if(strpos($fullUrl,"signup=emailIsInvalid") == true){
+        echo "<p class ='error'>sorry, &#128543 Invalid email address!... please try again.</p>";
       }
       if(strpos($fullUrl,"login=empty") == true){
         echo "<p class ='error'>&#128528 Please fill in all fields.</p>";
+      }
+      if(strpos($fullUrl,"logout=success") == true){
+        echo "<p class ='logoutStyle'>&#128533 You've Logged out, we hope you'll return shortly &#128591</p>";
       }
     ?>
     <div class="container" id="container">
@@ -59,7 +62,7 @@
           </div>
           <span>or use your account</span>
 
-          <input type="email" name="log_email" placeholder="Email">
+          <input type="text" name="log_email" placeholder="Username or Email">
           <input type="password" name="log_password" placeholder="Password">
           <a href="#">Forgot your password?</a>
           <button type="submit" name="log_submit">Login In</button>
@@ -83,6 +86,3 @@
     <script src="./Registration.js"></script>
   </body>
 </html>
-<?php
-  include_once '../../headerAndFooter/footer.php'
-?>
