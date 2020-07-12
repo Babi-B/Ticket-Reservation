@@ -3,3 +3,9 @@
   --primary-color: #2b2b2b;
   --secondary-color: green;
 }
+
+.main-wrapper{
+  margin: 0 auto;
+  width: 1000px;
+  
+}

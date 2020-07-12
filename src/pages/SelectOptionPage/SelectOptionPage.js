@@ -18,7 +18,7 @@ const data = [
         title: 'Location',
         image: '../../../res/images/l1.jpeg',
         link: "../GoogleMap/GoogleMap.html",
-        description: 'Know our Location and also more about us'
+        description: 'Know our Location on Google maps and also more about us'
     },
     {
         id: 4,

@@ -43,6 +43,8 @@ body {
 
 .listItem:hover .description {
   color: indigo;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 .listItem:hover .title {
@@ -85,7 +87,7 @@ body {
 }
 
 .description {
-  color: #dcdde1;
+  color: rgba(111, 30, 81,0.7);
   font-size: 16px;
   font-weight: bold;
 }
@@ -103,10 +105,10 @@ body {
 }
 
 .sideImage {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   animation: image-float 45s infinite;
-  margin-top: -30px
+  margin-top: -50px
 }
 
 @keyframes image-float {
