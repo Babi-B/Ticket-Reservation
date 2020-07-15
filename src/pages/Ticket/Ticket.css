@@ -1,45 +1,59 @@
-body{
-    background-image: url('../../../res/images/logo.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    
-    
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.main-div {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../../res/images/blurred-background-bus-combi-miniature-385998.jpg);
+  width: 55%;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-left: 5em;
+  margin-left: 7em;
+  border-radius: 1.5em;
+}
+.sect-1 {
+  height: auto;
+  width: 70%;
+  display: grid;
+  margin-top: -5em;
+  grid-template-columns: repeat(2, 2fr);
+  color: white;
+  grid-column-gap: 15em;
+}
+.sect-1 img {
+  width: 100%;
+  height: 5vh;
+  margin-top: -3em;
+}
+.div-41 {
+  margin-top: -3em;
+}
+.express {
+  width: 10em;
+  margin-left: 10em;
 }
 
-* {
-    box-sizing: border-box;   
+p {
+  border-left: 3px dashed rgb(4, 247, 255);
+  height: 59.5vh;
+  position: absolute;
+  top: -0.5em;
+  left: 49em;
 }
-.bg-text {
-    padding: 10px 10px 10px 10px;
-    margin: 40px 40px;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    text-align: left;
+
+.sect-2 {
+  position: absolute;
+  top: 3em;
+  left: 50em;
+  color: white;
 }
-.body {
-    
-    padding: 20px 20px;
-    margin: 10px;
-    height: 200px;
-    width: 200px;
-    position: relative;
-    float: right;
-}
-.Button1, .Button2 {
-    background-color: darkorange;
-    border-radius: 5px;
-    padding: 15px 15px;
-    margin: 10px 10px;
-    position: relative;
-    font-weight: bold;
-    font-size: larger;
+
+.center {
+  position: absolute;
+  top: 7em;
+  right: 10em;
 }
