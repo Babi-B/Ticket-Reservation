@@ -18,11 +18,9 @@
       <div class="sideButtons">
          <a class="sideButtonsText" href="../Home/Home.html">Home</a>
       </div>
-      <div class="sideButtons">
-        <form action="../../backend/auth/logout.php" method="POST">
-          <button  type="submit" name="log_out_submit">Logout</button>
-        </form>
-      </div>
+      <form action="../../backend/auth/logout.php" method="POST">
+        <button class="logout_button"  type="submit" name="log_out_submit">Logout</button>
+      </form>
       </div>
       <img
         class="sideImage"

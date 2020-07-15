@@ -26,14 +26,17 @@
       elseif(strpos($fullUrl,"signup=success") == true){
         echo "<p class ='success'>&#128512 You've signed up successfully, please Log in.</p>";
       }
-      if(strpos($fullUrl,"signup=emailIsInvalid") == true){
+      elseif(strpos($fullUrl,"signup=emailIsInvalid") == true){
         echo "<p class ='error'>sorry, &#128543 Invalid email address!... please try again.</p>";
       }
-      if(strpos($fullUrl,"login=empty") == true){
+      elseif(strpos($fullUrl,"login=empty") == true){
         echo "<p class ='error'>&#128528 Please fill in all fields.</p>";
       }
-      if(strpos($fullUrl,"logout=success") == true){
+      elseif(strpos($fullUrl,"logout=success") == true){
         echo "<p class ='logoutStyle'>&#128533 You've Logged out, we hope you'll return shortly &#128591</p>";
+      }
+      elseif(strpos($fullUrl,"login=error") == true){
+        echo "<p class ='loginError'>&#128558 oops, incorrect username or password &#129488</p>";
       }
     ?>
     <div class="container" id="container">

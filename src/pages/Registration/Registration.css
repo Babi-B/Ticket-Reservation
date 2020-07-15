@@ -226,7 +226,7 @@ input {
 
 /*stylings for backend actions*/
 .error{
-  color: #ff4b2b;
+  color: #EA2027;
   font-size: 23px;
   font-weight: bold;
 }
@@ -238,13 +238,19 @@ input {
 }
 
 .success{
-  color: #1dd1a1;
+  color: #c44569;
   font-size: 23px;
   font-weight: bold;
 }
 
 .logoutStyle{
-  color: #FFC312;
+  color: #0652DD;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.loginError{
+  color: #006266;
   font-size: 23px;
   font-weight: bold;
 }

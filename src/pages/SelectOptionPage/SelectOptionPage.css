@@ -288,3 +288,20 @@ body {
     color: indigo;
   }
 }
+
+.logout_button{
+  width: 80%;
+  height: 45px;
+  border: 1px solid grey;
+  margin-top: 30px;
+  cursor: pointer;
+  margin-left: 25px;
+  color:#0a0303;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all ease 1s;
+}
+
+.logout_button:hover{
+  transform: scale(1.05)
+}

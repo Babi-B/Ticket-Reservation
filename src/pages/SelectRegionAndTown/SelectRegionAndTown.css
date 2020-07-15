@@ -8,31 +8,18 @@ body{
 h2{
     color: white;
 }
-input[type=text] {
-    margin-left: 46%;
-    text-align: center;
-    margin: 0 100px;
-    
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    border-radius: 30px;
-}
+
 .header {
-    background-color: rgb(255, 255, 255);
-    text-align: left;
-    height: 40px;
+    background-color: rgb(0, 0, 0, 0.5);
+    text-align: center;
+    height: 4vw;
+    display: flex;
+    justify-content: space-around;
     
 }
 .header p{
-    font-size: 20px;
-    color: blue;
+    font-size: 2vw;
+    color: white;
 }
 .navbar{
     position: absolute;
@@ -81,65 +68,46 @@ input[type=text] {
     background-image: url("../../../res/images/anna.jpg");
     background-size: cover;
     background-size: 100%;
-   background-repeat: no-repeat;
-   background-position: left top;
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .colr{
     background-color: rgba(0, 0, 0, 0.5);
     height: 770px;
+    width: 80%;
+    
+    
 }
 .colr p{
     color: white;
     text-align: center;
-    font-size: 2vw;
+    font-size: 6vh;
 }
 
-#form input[type=text], select {
-   
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    border-radius: 30px;
+.formDiv p{
+    color: white;
+    font-size: 25px
 }
 
-#form input[type=submit] {
-   
+.formDiv input[type=submit] {
+    width: 26%;
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
     margin: 8px 0;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    border-radius: 30px;
 }
 
-#form input[type=submit]:hover {
-    background-color: #45a049;
-}
-#form label{
-    color: white;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 50%;
-    padding: 15px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.formDiv input[type=submit]:hover {
+    background-color: #0652DD;
+    transition: all ease 0.3s
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
@@ -151,32 +119,40 @@ input[type=text] {
 
 .main1{
     width: 100%;
-    margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    margin-top: 100px
 }
 .formDiv{
-    width: 30%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); */
     background-color: rgba(47, 54, 64,0.3);
     margin-left: 50px;
+    transition: all ease 3s;
 
 }
 
 .formDiv:hover{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    background-color: rgba(47, 54, 64,0.7);
-    transform: scale(1.1);
-    transition: all ease 3s;
+    background-color: rgba(47, 54, 64,0.8);
+    transform: scale(1.07);
+    transition: all ease 4s;
 }
 .TextDiv{
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 60px
+
+    
+}
+.TextDiv p{
+    color: white;
+    font-size: 4vh;
 }
 
 .form{
@@ -191,4 +167,76 @@ input[type=text] {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+marquee{
+    margin-top: -10px
+}
+
+marquee p{
+    animation: marquee 20s infinite;
+    margin-bottom: 30px;
+    font-weight: bolder
+}
+
+
+    @keyframes marquee {
+       0%{
+           color: white
+       }
+       25%{
+           color: #6D214F
+       }
+       50%{
+           color: #1B1464
+       }
+       100%{
+           color: #6F1E51
+       }
+    }
+
+    
+.dropdown {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    /* margin: 0 27px; */
+    font-size: 2.1vw;
+   
+}
+
+
+.dropdown input[type=submit] {
+    width: 80%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 20px
+}
+
+.formDiv select{
+    width: 80%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#region{
+    width: 190px
+}
+
+#town{
+    width: 190px
+}
+
+.defaultText{
+    color: white;
+    text-align: center;
+    font-size: 2.1vw;
 }
