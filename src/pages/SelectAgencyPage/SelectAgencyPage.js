@@ -116,7 +116,7 @@ document.getElementById('house').innerHTML=`
             <div class="cardfix">
               ${item.agencies.map((agency)=>{
                 return`
-                  <a href="#" class="card">
+                  <div href="#" class="card">
                     <div class="card-image"></div> 
                     <div class="card-text">
                      <span class="date">${agency.name}</span>
@@ -126,7 +126,7 @@ document.getElementById('house').innerHTML=`
                       Tariff: ${agency.price}frs
                      </ul>
                     </div>
-                  </a>
+                  </div>
                 `
               }).join('')}
             </div>
