@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    ></script>
     <meta charset="utf-8" />
     <title>SelectJourney</title>
-    <link rel="stylesheet" href="./selectJourney.css">     
-    </head>
+    <link rel="stylesheet" href="./selectJourney.css" />
+  </head>
   <body>
     <div class="head">
       <h1>SELECT YOUR JOURNEY</h1>
       <marquee><h1>We are waiting for your selection.</h1></marquee>
+      <br />
+      <form action="">
+        <input type="text" placeholder="Type In Your Journey Period..." />
+        <i class="fa fa-search search" aria-hidden="true"></i>
+      </form>
     </div>
-    <h1 class="morning">Morning</h1>
-    <div id="house">
-        
-    </div>
+
+    <div id="house"></div>
     <script type="text/javascript" src="selectJourney.js"></script>
   </body>
 </html>
