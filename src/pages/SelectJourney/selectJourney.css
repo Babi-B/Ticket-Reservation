@@ -61,7 +61,7 @@ h1 {
 form {
   text-align: center;
 }
-<<<<<<< HEAD
+
 form input {
   width: 30%;
   padding: 15px;
@@ -77,8 +77,7 @@ form input {
 form input:hover {
   box-shadow: 1px 2px 15px rgb(27, 27, 27);
   transition: all ease 2s;
-=======
-
+}
 .input {
   float: right;
   border-radius: 30%;
@@ -95,7 +94,6 @@ form input:hover {
   padding: 0% !important;
   margin: 50px;
   padding-left: 50px;
->>>>>>> cbfb4df5449c183fc74614c252c6d5301166eb74
 }
 .sect-1 {
   display: grid;
