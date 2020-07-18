@@ -47,6 +47,7 @@
  .rightbox{
      width: 60%;
      margin-left: 27%;
+     padding-top: 5px
      
  }
  .tabShow{
@@ -89,6 +90,7 @@
      font-family: "roboto",sans-serif;
      text-transform: uppercase;
      font-size: 15px;
+     font-weight: bold;
      border: 0;
      color: #fff;
      background: #7ed386;
@@ -98,7 +100,19 @@
      margin-top: 15px;
 
  }
+ .btn:hover{
+     transform: scale(1.03)
+ }
  .tabShow{
      display: none;
  }
 
+ .personalInfoAndProfilePic{
+     display: flex;
+     flex-direction: row;
+     width: 90%;
+     height: 80px;
+     border: 1px solid red;
+     justify-content: space-between;
+     align-items: center
+ }

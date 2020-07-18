@@ -49,9 +49,27 @@
             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
           </div>
           <span>or use your email address</span>
-          <input type="text"  name="name" placeholder="Name">
+          <input type="text" name="full_name" placeholder="Full Name">
+          <input type="text"  name="name" placeholder="User name">
           <input type="email"  name="email"  placeholder="Email">
           <input type="password"  name="password" placeholder="Password">
+          <div>
+            <span>Language:</span>
+            <select name="language" id="language">
+              <option value="English">English</option>
+              <option value="French">French</option>
+            </select>
+          </div>
+          <div>
+            <span>Location:</span>
+            <select name="location" id="location">
+              <option value="Buea">Buea</option>
+              <option value="Douala">Douala</option>
+              <option value="Yaounde">Yaounde</option>
+              <option value="Bamenda">Bamenda</option>
+            </select>
+          </div>
+          
           <button type="submit" name="reg_submit" >Sign Up</button>
         </form>
       </div>

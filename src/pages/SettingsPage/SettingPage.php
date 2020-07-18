@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include_once '../../backend/dbConnect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet">
 </head>
 <body>
+      <?php
+        $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        if(strpos($fullUrl,"upload=success") == true){
+          echo "<p class ='error'>&#128528 Nice profile you got there,</p>";
+        }
 
+      ?>
     <div class="container">
         <div class="leftbox">
             <nav>
@@ -33,50 +43,53 @@
         </div>
         <div class="rightbox">
             <div class="profile tabShow">
-                <h1>Personal Info</h1>
-                <h2>Full Name</h2>
-                <input type="text" class="input" value="Enter Name">
-                <h2>Birthday</h2>
-                <input type="text" class="input" placeholder="March 04 2000">
-                <h2>Gender</h2>
-                <select  type="text" id="country" name="country" >
-                    <option value="English">Female</option>
-                    <option value="French">Male</option> </select
-                  >
-                  <h2>Country</h2>
-                  <select id="country" name="country">
-                    <option value="Algeria">Algeria</option>
-                    <option value="Angola">Angola</option>
-                    <option value="Benin">Benin</option>
-                    <option value="Botswana">Botswana</option>
-                    <option value="Burkina Faso">Burkina Faso</option>
-                    <option value="Burundi">Burundi</option>
-                    <option value="Cabo Verde">Cabo Verde</option>
-                    <option value="Cameroon">Cameroon</option>
-                    <option value="Chad">Chad</option>
-                    <option value="Comoros">Comoros</option>
-                    <option value="Gabon">Gabon</option>
-                    <option value="Gambia">Gambia</option>
-                    <option value="Ghana">Ghana</option>
-                    <option value="Guinea">Guinea</option>
-                    <option value="Kenya">Kenya</option>
-                    <option value="Liberia">Liberia</option>
-                    <option value="Libya">Libya</option>
-                    <option value="Madagascar">Madagascar</option>
-                    <option value="Mali">Mali</option>
-                    <option value="Rwanda">Rwanda</option>
-                    <option value="South Africa">South Africa</option>
-                    <option value="Sudan">Sudan</option>
-                    <option value="Tanzania">Tanzania</option>
-                    <option value="Togo">Togo</option>
-                    <option value="Uganda">Uganda</option> </select
-                  >
-                <h2>Email</h2>
-                <input type="text" class="input" placeholder="example@example.com">
-                <h2>Password</h2>
-                <input type="password" class="input" placeholder="queencode">
-
-                <button class="btn">Update</button>
+                <div class="personalInfoAndProfilePic">
+                    <h1>Personal Info</h1>
+                    <div>
+                        <span>Change Profile_pic</span>
+                        <form action="../../backend/uploadImage.php" method="POST" enctype="multipart/form-data">
+                            <input type="file" name="file">
+                            <button type="submit" name="submit">Set</button>
+                        </form>
+                        <?php
+                            $sql= "SELECT * FROM users";
+                            $result = mysqli_query($conn,$sql);
+                            if(mysqli_num_rows($result)>0){
+                                while($row = mysqli_fetch_assoc($result)){
+                                    $id = $row['id'];
+                                    $sqlimg = "SELECT * FROM profileimg WHERE user_id ='id';";
+                                    $resultImg = mysqli_query($conn,$sqlimg);
+                                    while($rowImg = mysqli_fetch_assoc($resultImg)){
+                                        echo "<div>";
+                                            if($rowImg['status']==0){
+                                                "<img src='../../backend/uploads/profile".$id.".png'>";
+                                            }else{
+                                                echo "<img src='../../backend/uploads/5f12409ca01f35.58821257.png'>";
+                                            }
+                                            echo $row['user_name'];
+                                        echo "<div>";
+                                    }
+                                }
+                            }
+                        ?>
+                    </div>
+                </div>
+                <form action="../../backend/updateUserData.php" method="POST">
+                    <h2>Full Name</h2>
+                    <input type="text" class="input" value="Enter Name">
+                    <h2>User Name</h2>
+                    <input type="text" class="input" value="Enter User Name">
+                    <h2>Email</h2>
+                    <input type="text" class="input" placeholder="example@example.com">
+                    <h2>Password</h2>
+                    <input type="password" class="input" placeholder="queencode">
+                    <h2>Language</h2>
+                    <input type="text" class="input" placeholder="Language">
+                    <h2>Location</h2>
+                    <input type="text" class="input" placeholder="location">
+    
+                    <input type="submit" class="btn" value="UPDATE">
+                </form>
             </div>
             <div class=" payment tabShow">
                 <h1>Payment Info</h1>

@@ -3,12 +3,15 @@ if(isset($_POST['reg_submit'])){
 
     include_once '../dbConnect.php';
 
+    $full_name = mysqli_real_escape_string($conn, $_POST['full_name']);
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $language = mysqli_real_escape_string($conn, $_POST['language']);
+    $location = mysqli_real_escape_string($conn, $_POST['location']);
 
     //check for empty fields
-    if(empty($name)||empty($email)||empty($password)){
+    if(empty($full_name)||empty($name)||empty($email)||empty($password)){
         header("Location: ../../pages/Registration/Registration.php?signup=empty");
         exit();
     }else{
@@ -33,7 +36,7 @@ if(isset($_POST['reg_submit'])){
                     //hashing the password
                     $hashedPassword = password_hash($password,PASSWORD_DEFAULT);
                     //Insert the user into the database
-                    $sql = "INSERT INTO users (name, email, password) VALUES ('$name','$email','$hashedPassword');";
+                    $sql = "INSERT INTO users (name, email, password, full_name,  language, location) VALUES ('$name','$email','$hashedPassword', '$full_name', '$language', '$location');";
                     mysqli_query($conn,$sql);
                     header("Location: ../../pages/Registration/Registration.php?signup=success");
                     exit();
