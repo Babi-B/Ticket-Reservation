@@ -3,121 +3,173 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home Page</title>
     <link rel="stylesheet" href="./Home.css" />
-    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    ></script>
   </head>
   <body>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <div class="container">
-        
-        <div class="main row">
-            
-            <div class="head">
-                <div class="navbar">
-                    <div class="navbar1">
-                  <a class="active" href="#"><i class="fa fa-fw fa-home"></i>T-Express</a>
-                 
-                    </div>
-                  <div class="navbar2">
-                  <a href="../Registration/registration.html"><i class="fa fa-fw fa-user"></i> Logout</a>
-                  <a href="#"><i class="fa fa-fw fa-user"></i> Go to ticket reservation</a>
-                  </div>
-                </div>
-                <marquee><h1>T-EXPRESS...</h1></marquee>
-        
-    
-            </div>
-        
-<div class="content">
+    <section class="main-section">
+      <section class="section-1" id="section-1">
+        <div class="main-img"></div>
+        <nav class="nav-bar">
+          <img src="../../../res/images/Lingala Express (1).png" class="express" />
+          <ul class="nav-links">
+            <li class="list-items"><a href="./Home.html">Home</a></li>
+            <li class="list-items"><a href="../Registration/Registration.php">Register</a></li>
+            <li class="list-items"><a href="#section-2">About</a></li>
+           
+            <li class="book-now"><a href="#">Reservation</a></li>
+          </ul>
+        </nav>
 
-
-<p id="content-1">Travelling round the world....</p>
-
-<h1 id="content-2">With T-express</h1>
-
-
-</div>
-    <!-- cards -->
-    <div class="row">
-        <div class="card col-3">
-          <img src="../../../res/images/bUS1.jpg">
-          <button class="button-1" type="button"> <a href="../SelectAgencyPage/SelectAgencyPage.html"><i class="fa fa-fw fa-arrow"></i> GET STARTED</a></button>
+        <div class="text-elem">
+          <h3 data-aos="fade-down">WELCOME TO LINGALA EXPRESS</h3>
+          <h4 data-aos="fade-right">
+            WE ARE HERE TO MAKE YOU TRAVEL WITH EASE AND COMFORT
+          </h4>
+          <br />
+          <div class="icon" data-aos="fade-up">
+            <a href="#section-4"
+              ><i class="fas fa-chevron-down" id="icon"></i
+            ></a>
           </div>
-          <div class="card col-3">
-            <img src="../../../res/images/bUS2.jpg">
-            <button class="button-1" type="button"> <a href="../SelectAgencyPage/SelectAgencyPage.html"><i class="fa fa-fw fa-arrow"></i> GET STARTED</a></button>
-          </div>
-          <div class="card col-3">
-            <img src="../../../res/images/BUS3.jpg">
-         <button class="button-1" type="button"> <a href="../SelectAgencyPage/SelectAgencyPage.html"><i class="fa fa-fw fa-arrow"></i> GET STARTED</a></button>
-          </div> 
-       
-    </div>
-    </div>
         </div>
-      
-      </body>
-
-        <footer class="footer-c">
-    
-          <div class="footer-left">
-    
-            <h3>T-Express<span>FET</span></h3>
-    
-            <p class="footer-links">
-              <a href="#">Home</a>
-              
-              <a href="#">Blog</a>
-              
-              <a href="#">Pricing</a>
-              
-              <a href="#">Faq</a>
-              
-              <a href="#">Contact</a>
-            </p>
-    
-            <p class="footer-company-name">T-Express &copy; 2020</p>
-          </div>
-    
-          <div class="footer-center">
-    
-            <div>
-              <i class="fa fa-map-marker"></i>
-              <p><span>UB-Junction</span>Molyko,Buea</p>
-            </div>
-    
-            <div>
-              <i class="fa fa-phone"></i>
-              <p>682818678</p>
-            </div>
-    
-            <div>
-              <i class="fa fa-envelope"></i>
-              <p><a href="#">T-Express@gmail.com</a></p>
-            </div>
-    
-          </div>
-    
-          <div class="footer-right">
-    
-            <p class="footer-company-about">
-              <span>About us</span>
-             Hi there
-            </p>
-    
-            <div class="footer-icons">
-    
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
+      </section>
+      <div class="section-2-div" id="section-2">
+        <section class="section-2" id="card" data-aos="fade-left">
+          <div class="card-img">
         
-    
-            </div>
-    
+            <img src="../../../res/images/Bus-de-transport-de-Finex-Voyages-Mini.jpg" />
           </div>
-    
+          <div class="card-text">
+            <h3 class="card-h3">
+              We Offer the best reservation services in the national territory
+            </h3>
+            <p>
+              Lingala Express is here to help users to travel with ease and comfort by providing them
+              with  information and resources that facilitates their traveling. At lingala express,we 
+              provide our users with the best traveling agenncies all over the national territory,we give them
+              the ability to reserve tickets just in one click.
+            </p>
+            <button>
+              About Us
+            </button>
+          </div>
+          <a href="#section-1">
+            <i class="fas fa-chevron-circle-up" id="floating-icon"></i
+          ></a>
+        </section>
+      </div>
+      <section class="section-3">
+        <div class="res res-1" data-aos="fade-right">
+          <h3>Reliable Buses</h3>
+          <img src="../../../res/images/white-bus-on-road-near-cliff-1178448.jpg" alt="" />
+          <p>The buses at lingala express are clean and in good state,
+          <br>   each bus is washed and disinfected after every journey.</p>
+          <button>Reserve Now</button>
+        </div>
+        <div class="res res-2" data-aos="fade-left">
+          <h3>Guichet B</h3>
+          <img src="../../../res/images/woman-standing-in-bus-946281.jpg" alt="" />
+          <p>The buses at lingala express are clean and in good state,
+            <br>   each bus is washed and disinfected after every journey.</p>
+          <button>Reserve Now</button>
+        </div>
+        <div class="res res-3" data-aos="fade-right">
+          <h3>Guichet C</h3>
+          <img src="../../../res/images/bus-bench-seats-808846.jpg" alt="" />
+          <p>The buses at lingala express are clean and in good state,
+            <br>   each bus is washed and disinfected after every journey.</p>
+          <button>Reserve Now</button>
+        </div>
+        <div class="res res-4" data-aos="fade-left">
+          <h3>Guichet D</h3>
+          <img
+            src="../../../res/images/grayscale-photo-of-people-sitting-inside-a-bus-3723002.jpg"
+            alt=""
+          />
+          <p>The buses at lingala express are clean and in good state,
+            <br>   each bus is washed and disinfected after every journey.</p>
+          <button>Reserve Now</button>
+        </div>
+      </section>
+      <section class="section-4" id="section-4">
+        <footer>
+          <div class="foot-1">
+            <img src="../../../res/images/Lingala Express (1).png" class="footer-logo" />
+            <br> <br>
+            <h3>About Us</h3>
+            <br>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad
+            </p>
+            <br> 
+            <h3>Contact Us</h3>
+            <br>
+            <h4><i class="fa fa-phone" aria-hidden="true"></i>  +237 675 979 594</h4> <br>
+            <h4> <i class="fa fa-envelope" aria-hidden="true"></i>  lingalaexpress@gmail.com</h4>
+          </div>
+          <div class="part part-1">
+            <ul>
+              <h3>Information</h3>
+              <li><a href="#!">Events</a></li>
+              <li><a href="#!">Facilities</a></li>
+              <li><a href="#!">Pricing</a></li>
+              <li><a href="#!">Reduction</a></li>
+            </ul>
+          </div>
+          <div class="part part-2">
+            <ul>
+              <h3>Helpful Links</h3>
+              <li><a href="#!">Privacy Policy</a></li>
+              <li><a href="#!">Customer Feability</a></li>
+              <li><a href="#!">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="part part-3">
+            <ul class="ul-footer">
+              <h3>Our Statistics</h3>
+              <li>
+                <i><i class="fab fa-twitter" aria-hidden="true"></i>
+                <h4 class="statistic" data-target="10000"> 0</h4>
+              </li>
+              <li> <i class="fab fa-facebook" aria-hidden="true"></i>
+                <h4 class="statistic" data-target="6000"> 0</h4></li>
+              <li> <i class="fab fa-instagram" aria-hidden="true"></i>
+                <h4 class="statistic" data-target="3000"> 0</h4></li>
+            </ul>
+          </div>
+        
         </footer>
+        <h5></h5>
+        <div class="last-iconns">
+          <br>
+        
+
+        <i><i class="fab fa-twitter" ></i>
+        <i><i class="fab fa-youtube" aria-hidden="true"></i>
+        <i><i class="fab fa-facebook" ></i>
+        <i><i class="fab fa-snapchat-ghost" ></i>
+        </div>
+      </section>
+    </section>
+
+    <script src="./Home.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 200, duration: 1000 });
+    </script>
+  </body>
 </html>
