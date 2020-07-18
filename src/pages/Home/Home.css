@@ -53,9 +53,9 @@ a {
   cursor: pointer;
   list-style: none;
 }
-.nav-links li:hover {
+/* .nav-links li:hover {
   border-bottom: 2px solid rgb(164, 218, 39);
-}
+} */
 .book-now {
   padding: 12px;
   background-color: #47ec2c;
@@ -157,7 +157,7 @@ a {
 
 .section-2 p {
   font-size: 1.2em;
-  line-height: 32px;
+  line-height: 38px;
   padding: 5px;
   font-family: sans-serif;
   margin: 10px;
@@ -217,19 +217,19 @@ a {
   height: 40vh;
   position: absolute;
   top: 3em;
-  left: 7em;
+  left: 5em;
 }
 .res {
   width: 80%;
-  height: 63vh;
+  height: 68vh;
   background-color: rgb(112, 112, 112);
   position: relative;
-  margin-left: 2.5em;
+  margin-left: 2em;
   margin-top: 1em;
 }
 .res-2,
 .res-4 {
-  margin-left: -3.5em;
+  margin-left: -1.5em;
 }
 .section-3 button {
   padding: 15px;
@@ -238,7 +238,7 @@ a {
   font-size: 20px;
   width: 27%;
   position: absolute;
-  top: 21em;
+  top: 23em;
   left: 12em;
   border: none;
 }
@@ -260,7 +260,8 @@ a {
   color: white;
   position: absolute;
   top: 19.9em;
-  left: 6em;
+  left: 4em;
+  line-height: 36px;
   font-size: 19px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
