@@ -39,6 +39,15 @@
         echo "<p class ='loginError'>&#128558 oops, incorrect username or password &#129488</p>";
       }
     ?>
+    <nav class="nav-bar">
+          <ul class="nav-link">
+          <img src="../../../res/images/Lingala Express (1).png" class="express" />
+          <ul class="nav-links">
+            <li><a href="../Home/Home.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="../Registration/Registration.php">Register</a></li>
+          </ul>
+        </nav>
     <div class="container" id="container">
       <div class="form-container sign-up-container">
         <form action="../../backend/auth/signup.php" method="POST">
@@ -53,15 +62,11 @@
           <input type="text"  name="name" placeholder="User name">
           <input type="email"  name="email"  placeholder="Email">
           <input type="password"  name="password" placeholder="Password">
-          <div>
-            <span>Language:</span>
+          <div class="locationAndLanguage">
             <select name="language" id="language">
               <option value="English">English</option>
               <option value="French">French</option>
             </select>
-          </div>
-          <div>
-            <span>Location:</span>
             <select name="location" id="location">
               <option value="Buea">Buea</option>
               <option value="Douala">Douala</option>

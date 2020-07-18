@@ -106,13 +106,13 @@ document.getElementById('house').innerHTML = `
                ${item.journeys
                  .map((cardItem) => {
                    return `
-                        <div class="card box">
+                        <a href="../Ticket/Ticket.php" class="card box">
                             <img src=${cardItem.img} alt="" />
                             <ul>
                                 <li>Name : ${cardItem.name}</li>
                                 <li>Cost : ${cardItem.cost}</li>
                             </ul>
-                        </div>
+                        </a>
                    `;
                  })
                  .join('')}

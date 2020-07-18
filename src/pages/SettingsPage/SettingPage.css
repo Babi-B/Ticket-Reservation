@@ -18,7 +18,7 @@
      top: -5%;
      left: 5%;
      position: absolute;
-     width: 15%;
+     width: 20%;
      height: 110%;
      background: #037272;
      box-shadow: 3px 3px 10px rgba(119, 119, 119, .5);
@@ -47,7 +47,7 @@
  .rightbox{
      width: 60%;
      margin-left: 27%;
-     padding-top: 5px
+     padding-top: 0px
      
  }
  .tabShow{
@@ -59,11 +59,11 @@
      font-family: "Monsterrat" , sans-serif;
      color: #7ed386;
      font-size: 1.2rem;
-     margin-top: 40px;
-     margin-bottom:35px;
+     margin-top: 0px;
+     margin-bottom:0px;
  }
  h2{
-     color: #777;
+     color: rgba(109, 33, 79,1.0);
      font-family: "Roboto",sans-serif;
      text-transform: uppercase;
      font-size: 12px;
@@ -115,4 +115,14 @@
      border: 1px solid red;
      justify-content: space-between;
      align-items: center
+ }
+
+ .profilePic{
+     width:50px;
+     height:50px
+ }
+ span{
+     color: #ffffff;
+     font-weight: bold;
+     font-family: Verdana, Geneva, Tahoma, sans-serif
  }

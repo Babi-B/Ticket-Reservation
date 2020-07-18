@@ -5,8 +5,8 @@
 .main-div {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../../../res/images/blurred-background-bus-combi-miniature-385998.jpg);
-  width: 55%;
-  height: 60vh;
+  width: 65%;
+  height: 65vh;
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,7 +17,7 @@
 }
 .sect-1 {
   height: auto;
-  width: 70%;
+  width: 75%;
   display: grid;
   margin-top: -5em;
   grid-template-columns: repeat(2, 2fr);
@@ -39,7 +39,7 @@
 
 p {
   border-left: 3px dashed rgb(4, 247, 255);
-  height: 59.5vh;
+  height: 63.5vh;
   position: absolute;
   top: -0.5em;
   left: 49em;

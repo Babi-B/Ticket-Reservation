@@ -6,8 +6,8 @@ agencyData=[
     agencies:[
       {
         name:"Musango BUS SERVICE",
-        journeyName: 'Buea-Yaounde',
-        price:'5000frs'
+        journeyName: 'Buea-Douala',
+        price:'1500frs'
 
       },
       {
@@ -18,8 +18,8 @@ agencyData=[
       },
       {
         name:"AMOMEZAM",
-        journeyName: 'Buea-Yaounde',
-        price:'5000frs'
+        journeyName: 'Buea-Bamenda',
+        price:'6000frs'
 
       },
 
@@ -28,23 +28,23 @@ agencyData=[
   {
     id:'Douala',
     welcomeText:'Welcome To Douala',
-    image: "../../../res/images/6.jpg",
+    image: "../../../res/images/2.jpg",
     agencies:[
       {
         name:"Musango BUS SERVICE",
-        journeyName: 'Buea-Yaounde',
+        journeyName: 'Douala-Yaounde',
         price:'5000frs'
 
       },
       {
         name:"GUARANTEE EXPRESS",
-        journeyName: 'Buea-Yaounde',
+        journeyName: 'Douala-Buea',
         price:'5000frs'
 
       },
       {
         name:"AMOMEZAM",
-        journeyName: 'Buea-Yaounde',
+        journeyName: 'Douala-Bamenda',
         price:'5000frs'
 
       },
@@ -54,23 +54,23 @@ agencyData=[
   {
     id:'Bamenda',
     welcomeText:'Welcome To Bamenda',
-    image: "../../../res/images/6.jpg",
+    image: "../../../res/images/1.jpg",
     agencies:[
       {
         name:"Musango BUS SERVICE",
-        journeyName: 'Buea-Yaounde',
+        journeyName: 'Bamenda-Douala',
         price:'5000frs'
 
       },
       {
         name:"GUARANTEE EXPRESS",
-        journeyName: 'Buea-Yaounde',
+        journeyName: 'Bamenda-Buea',
         price:'5000frs'
 
       },
       {
         name:"AMOMEZAM",
-        journeyName: 'Buea-Yaounde',
+        journeyName: 'Bamenda-Bamenda',
         price:'5000frs'
 
       },
@@ -80,23 +80,23 @@ agencyData=[
   {
     id:'Yaounde',
     welcomeText:'Welcome To Yaounde',
-    image: "../../../res/images/6.jpg",
+    image: "../../../res/images/4.jpg",
     agencies:[
       {
         name:"Musango BUS SERVICE",
-        journeyName: 'Buea-Yaounde',
+        journeyName: 'Yaounde-Bamenda',
         price:'5000frs'
 
       },
       {
         name:"GUARANTEE EXPRESS",
-        journeyName: 'Buea-Yaounde',
+        journeyName: 'Yaounde-Buea',
         price:'5000frs'
 
       },
       {
         name:"AMOMEZAM",
-        journeyName: 'Buea-Yaounde',
+        journeyName: 'Yaounde-Douala',
         price:'5000frs'
 
       },
@@ -110,13 +110,13 @@ document.getElementById('house').innerHTML=`
     return`
           <div id=${item.id} class="tabcontent">
             <h1>${item.welcomeText}</h1>
-            <h2>Select Your agency of preference</h2>
+            <h2>Select Your agency of preference, in each are a fe</h2>
             <img class="image" src=${item.image} alt="">
 
             <div class="cardfix">
               ${item.agencies.map((agency)=>{
                 return`
-                  <div href="#" class="card">
+                  <a href="../SelectJourney/selectJourney.html" class="card">
                     <div class="card-image"></div> 
                     <div class="card-text">
                      <span class="date">${agency.name}</span>
@@ -126,7 +126,7 @@ document.getElementById('house').innerHTML=`
                       Tariff: ${agency.price}frs
                      </ul>
                     </div>
-                  </div>
+                  </a>
                 `
               }).join('')}
             </div>

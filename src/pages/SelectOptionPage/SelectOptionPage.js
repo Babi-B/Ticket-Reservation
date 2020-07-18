@@ -10,7 +10,7 @@ const data = [
         id: 2,
         title: 'Settings',
         image: '../../../res/images/s3.jpeg',
-        link: "../SettingsPage/SettingPage.html",
+        link: "../SettingsPage/SettingPage.php",
         description: 'Go through your account settings and other settings like language, location and also premium services'
     },
     {

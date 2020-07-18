@@ -32,6 +32,9 @@
                        $_SESSION['user_name'] = $row['name'];
                        $_SESSION['user_email'] = $row['email'];
                        $_SESSION['user_password'] = $row['password'];
+                       $_SESSION['full_name'] = $row['full_name'];
+                       $_SESSION['language'] = $row['language'];
+                       $_SESSION['location'] = $row['location'];
                        header("Location: ../../pages/SelectOptionPage/SelectOptionPage.php?login=success");
                        exit();
                    }

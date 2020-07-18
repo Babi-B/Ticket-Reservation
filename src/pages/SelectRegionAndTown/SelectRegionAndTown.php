@@ -35,19 +35,21 @@
 
             <div class="main1">
                 <div class="formDiv">
-                    <form action="SelectRegionAndTown.php" method="GET" class="form">
+                    <div  class="form">
                         <div class="dropdown">
                             <label for="Region">
                                 <p>Region</p>
                             </label>
-                            <select type="submit" id="region" name="region" onchange="changeTown(this.value)">
-                                <option value="">Select your Region</option>
-                                <option value="North-West">North-West</option>
-                                <option value="South-West">South-West</option>
-                                <option value="Center">Center</option>
-                                <option value="Littoral">Littoral</option>
-                            </select>
-                            <input type="submit" value="choose">
+                            <form class="form" action="SelectRegionAndTown.php" method="GET"> 
+                                <select type="submit" id="region" name="region" onchange="changeTown(this.value)">
+                                    <option value="">Select your Region</option>
+                                    <option value="North-West">North-West</option>
+                                    <option value="South-West">South-West</option>
+                                    <option value="Center">Center</option>
+                                    <option value="Littoral">Littoral</option>
+                                </select>
+                                <input type="submit" value="choose">
+                            </form>
                         </div>
                         <label for="country">
                         </label>
@@ -66,7 +68,9 @@
                                             <option value="Bamenda">Bamenda</option>
                                             <option value="Ngoundere">Ngoundere</option>
                                         </select>
-                                        <input type="submit" value="Accept">
+                                        <a href="../SelectAgencyPage/SelectAgencyPage.html">
+                                             <button>Accept</button>
+                                        </a>
                                         ';
                                     break;
 
@@ -77,7 +81,9 @@
                                             <option value="Tiko">Tiko</option>
                                             <option value="Mutenguene">Mutenguene</option>
                                         </select>
-                                        <input type="submit" value="Accept">
+                                        <a href="../SelectAgencyPage/SelectAgencyPage.html">
+                                             <button>Accept</button>
+                                        </a>
                                         ';
                                     break;   
                                     
@@ -85,7 +91,9 @@
                                     echo'<select id="town" name="town">
                                             <option value="Douala">Douala</option>
                                         </select>
-                                        <input type="submit" value="Accept">
+                                        <a href="../SelectAgencyPage/SelectAgencyPage.html">
+                                             <button>Accept</button>
+                                        </a>
                                         ';
                                     break;   
 
@@ -93,7 +101,9 @@
                                     echo'<select id="town" name="town">
                                             <option value="Yaounde">Yaounde</option>
                                         </select>
-                                        <input type="submit" value="Accept">
+                                        <a href="../SelectAgencyPage/SelectAgencyPage.html">
+                                             <button>Accept</button>
+                                        </a>
                                         ';
                                     break;   
                                 
@@ -103,7 +113,7 @@
                                     break;
                             }
                         ?>
-                    </form>
+                    </div>
                 </div>
                 <div class="TextDiv">
                     <h2>We give you secure and save transactions</h2>

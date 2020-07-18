@@ -1,6 +1,7 @@
 <?php
     session_start();
     include_once '../../backend/dbConnect.php';
+    $id = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,81 +15,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet">
 </head>
 <body>
-      <?php
-        $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        if(strpos($fullUrl,"upload=success") == true){
-          echo "<p class ='error'>&#128528 Nice profile you got there,</p>";
-        }
-
-      ?>
     <div class="container">
         <div class="leftbox">
             <nav>
                 <a onclick="tabs(0)" class="tab active" >
                 <i class="fa fa-user"></i>
+                <span>Personal Info</span>
             </a>
             <a onclick="tabs(1)" class="tab" >
                 <i class="fa fa-credit-card"></i>
+                <span>credit card</span>
             </a>
             <a onclick="tabs(2)" class="tab" >
                 <i class="fa fa-tv"></i>
+                <span>subscription info</span>
             </a>
             <a onclick="tabs(3)" class="tab" >
                 <i class="fa fa-tasks"></i>
+                <span>Privacy settings</span>
             </a>
             <a onclick="tabs(4)" class="tab" >
                 <i class="fa fa-cog"></i>
+                <span>Account Settings</span>
             </a>
             </nav>
         </div>
         <div class="rightbox">
             <div class="profile tabShow">
-                <div class="personalInfoAndProfilePic">
+              
                     <h1>Personal Info</h1>
                     <div>
-                        <span>Change Profile_pic</span>
-                        <form action="../../backend/uploadImage.php" method="POST" enctype="multipart/form-data">
-                            <input type="file" name="file">
-                            <button type="submit" name="submit">Set</button>
-                        </form>
+                        <p>Profile Picture</p>
                         <?php
-                            $sql= "SELECT * FROM users";
-                            $result = mysqli_query($conn,$sql);
-                            if(mysqli_num_rows($result)>0){
-                                while($row = mysqli_fetch_assoc($result)){
-                                    $id = $row['id'];
-                                    $sqlimg = "SELECT * FROM profileimg WHERE user_id ='id';";
-                                    $resultImg = mysqli_query($conn,$sqlimg);
-                                    while($rowImg = mysqli_fetch_assoc($resultImg)){
-                                        echo "<div>";
-                                            if($rowImg['status']==0){
-                                                "<img src='../../backend/uploads/profile".$id.".png'>";
-                                            }else{
-                                                echo "<img src='../../backend/uploads/5f12409ca01f35.58821257.png'>";
-                                            }
-                                            echo $row['user_name'];
-                                        echo "<div>";
-                                    }
+                            $sqlimg = "SELECT * FROM profileimg WHERE user_id ='$id';";
+                            $resultImg = mysqli_query($conn,$sqlimg);
+                            while($rowImg = mysqli_fetch_assoc($resultImg)){
+                                if($rowImg['status']==0){
+                                    echo "<img class='profilePic' src='../../backend/uploads/profile".$id.".png?'".mt_rand().">";
+                                }else{
+                                    echo "<img class='profilePic' src='../../backend/uploads/5f12409ca01f35.58821257.png'>";
                                 }
+                                echo $row['user_name'];
                             }
-                        ?>
-                    </div>
+                            ?>
+                            <form action="../../backend/uploadImage.php" method="POST" enctype="multipart/form-data">
+                                <input type="file" name="file">
+                                <button type="submit" name="submit">change</button>
+                            </form>
                 </div>
                 <form action="../../backend/updateUserData.php" method="POST">
-                    <h2>Full Name</h2>
-                    <input type="text" class="input" value="Enter Name">
-                    <h2>User Name</h2>
-                    <input type="text" class="input" value="Enter User Name">
-                    <h2>Email</h2>
-                    <input type="text" class="input" placeholder="example@example.com">
-                    <h2>Password</h2>
-                    <input type="password" class="input" placeholder="queencode">
-                    <h2>Language</h2>
-                    <input type="text" class="input" placeholder="Language">
-                    <h2>Location</h2>
-                    <input type="text" class="input" placeholder="location">
+                    <h2><?php echo $_SESSION['full_name']?></h2>
+                    <input name="full_name" type="text" class="input" value="Enter Name">
+                    <h2><?php echo $_SESSION['user_name']?></h2>
+                    <input name="name" type="text" class="input" value="Enter User Name">
+                    <h2><?php echo $_SESSION['user_email']?></h2>
+                    <input name="email" type="text" class="input" placeholder="example@example.com">
+                    <h2><?php echo $_SESSION['language']?></h2>
+                    <input name="language" type="text" class="input" placeholder="Language">
+                    <h2><?php echo $_SESSION['location']?></h2>
+                    <input name="location" type="text" class="input" placeholder="location">
     
-                    <input type="submit" class="btn" value="UPDATE">
+                    <input type="submit" name="updateProfile" class="btn" value="UPDATE">
                 </form>
             </div>
             <div class=" payment tabShow">

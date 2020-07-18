@@ -38,6 +38,15 @@ if(isset($_POST['reg_submit'])){
                     //Insert the user into the database
                     $sql = "INSERT INTO users (name, email, password, full_name,  language, location) VALUES ('$name','$email','$hashedPassword', '$full_name', '$language', '$location');";
                     mysqli_query($conn,$sql);
+                    $sqlNew = "SELECT * FROM users WHERE email ='$email';";
+                    $resultNew = mysqli_query($conn,$sqlNew);
+                    if(mysqli_num_rows($resultNew)>0){
+                        while($row=mysqli_fetch_assoc($resultNew)){
+                            $userid = $row['id'];
+                            $sqlimg = "INSERT INTO profileimg (user_id,status) VALUES ('$userid',1)";
+                            mysqli_query($conn,$sqlimg);
+                        }
+                    }
                     header("Location: ../../pages/Registration/Registration.php?signup=success");
                     exit();
                 }
